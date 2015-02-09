@@ -8,6 +8,42 @@
   background-color: $card-bg-color;
 }
 
+.card-with-image-left {
+  @extend .card;
+  padding-left: 30%;
+
+  .card-image-left {
+    position: absolute;
+    @include border-radius(2px 0 0 2px);
+
+    float: left;
+    left: 0;
+    z-index: 1;
+    width: 30%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.card-with-image-right {
+  @extend .card;
+  padding-right: 30%;
+
+  .card-image-right {
+    position: absolute;
+    @include border-radius(0 2px 2px 0);
+
+    float: right;
+    right: 0;
+    z-index: 1;
+    width: 30%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 .card {
   position: relative;
   margin: $element-top-margin 0 $element-bottom-margin 0;
